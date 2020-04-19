@@ -12,7 +12,7 @@ export function handleSubmit(event) {
         document.getElementById('results').innerHTML = res.message
     })
 
-    fetch(`/pokemon/${formText}`)
+    fetch(`http://localhost:8081/pokemon/${formText}`)
     .then(res => res.json())
     .then(function(res) {
         console.log('Returned Pokemon cards: ', res);
