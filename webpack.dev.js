@@ -6,6 +6,10 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 module.exports = {
     entry: "./src/client/index.js",
+    output: {
+        libraryTarget: "var",
+        library: "Client"
+    },
     module: {
         rules: [
             /* Use enforce: 'pre' to check source files, 
